@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Manager</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <h2>Project Manager</h2>
+    <div>
+      <button class="btn" onclick="openEditAccount()">Edit Account</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <h3>Add New Project</h3>
+    <div class="form-group">
+      <label for="projectName">Project Name:</label>
+      <input type="text" id="projectName" placeholder="Enter Project Name">
+    </div>
+    
+    <button class="btn" onclick="addProject()">Add Project</button>
+
+
+    <!-- Tasks Table -->
+    <h3>Your Projects</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="tasksTable">
+        <!-- Tasks will be inserted here dynamically -->
+      </tbody>
+    </table>
+    
+
+    <div id="pagination" style="margin-top: 20px; text-align: center;"></div>
+
+    <h3>Your Joined Projects</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+    
+      <tbody id="joinedProjectsTable">
+        <!-- Tasks will be inserted here dynamically -->
+      </tbody>
+    </table>
+    
+    <div id="pagination" style="margin-top: 20px; text-align: center;"></div>
+    </div>
+    <div id="taskPopup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closeTasksPopup()">&times;</span>
+        <h2 id="popupTitle"></h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="taskList"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  
+  
+  
+
+
+  <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
