@@ -1,4 +1,4 @@
-    const API_JOINED_URL = "http://localhost:3000/api/v1/projects?type=joined";
+    const API_JOINED_URL = "https://task-manager-jdre.onrender.com/api/v1/projects?type=joined";
 
     async function fetchJoinedProjects(page = 1) {
       const token = localStorage.getItem("token");
@@ -63,7 +63,7 @@
       }
 
       try {
-        const response = await fetch(`http://localhost:3000/api/v1/projects/${projectId}/tasks`, {
+        const response = await fetch(`https://task-manager-jdre.onrender.com/api/v1/projects/${projectId}/tasks`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -104,7 +104,7 @@
         }
 
         try {
-          const response = await fetch(`http://localhost:3000/api/v1/projects/${projectId}/members/`, {
+          const response = await fetch(`https://task-manager-jdre.onrender.com/api/v1/projects/${projectId}/members/`, {
             method: "DELETE",
             headers: {
               "Authorization": `Bearer ${token}`,
@@ -142,7 +142,7 @@
       }
 
       try {
-        const response = await fetch("http://localhost:3000/api/v1/projects", {
+        const response = await fetch("https://task-manager-jdre.onrender.com/api/v1/projects", {
           method: "POST",
           headers: {
             "Authorization": `Bearer ${token}`,
@@ -172,7 +172,7 @@
       }
     }
 
-    const API_URL = "http://localhost:3000/api/v1/projects?type=owned";
+    const API_URL = "https://task-manager-jdre.onrender.com/api/v1/projects?type=owned";
     let currentPage = 1;
 
     async function fetchTasks(page = 1) {
@@ -273,7 +273,7 @@
         }
 
         try {
-          const response = await fetch(`http://localhost:3000/api/v1/projects/${projectId}`, {
+          const response = await fetch(`https://task-manager-jdre.onrender.com/api/v1/projects/${projectId}`, {
             method: "DELETE",
             headers: {
               "Authorization": `Bearer ${token}`,
@@ -326,7 +326,7 @@
 
         const token = localStorage.getItem("token");
         try {
-            const response = await fetch(`http://localhost:3000/api/v1/projects/${projectId}/tasks/${taskId}`, {
+            const response = await fetch(`https://task-manager-jdre.onrender.com/api/v1/projects/${projectId}/tasks/${taskId}`, {
                 method: "PUT",
                 headers: {
                     "Authorization": `Bearer ${token}`,
@@ -359,7 +359,7 @@
     }
 
     try {
-        const response = await fetch(`http://localhost:3000/api/v1/projects/${projectId}/tasks`, {
+        const response = await fetch(`https://task-manager-jdre.onrender.com/api/v1/projects/${projectId}/tasks`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,
